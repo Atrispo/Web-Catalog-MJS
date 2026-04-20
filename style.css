@@ -24,7 +24,11 @@ nav ul {
     display: flex; 
     list-style: none;
 }
-
+nav span {
+    color : black;
+    font-weight: bold;
+    text-decoration: none;
+}
 nav ul li {
     margin-left: 20px;
 }
@@ -78,9 +82,41 @@ hr {
     height: 40px;
     object-fit: contain;
 }
+/* MID */
+.mid {
+    position: relative;
+    height: 100vh;
+    background: url('image/toko.jpg') no-repeat center/cover;
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    color: white;
+    padding: 50px 80px;
+}
 
+.mid-text {
+    position: relative;
+    z-index: 1;
+    max-width: 500px;
+    width: 50%;
+    text-align: right;
+    font-size: 32px;
+    margin-left : auto;
+
+}
+/* VISI */
+.visi-text {
+    display : flex;
+    justify-content: space-between;
+    gap : 20px;
+    padding : 40px;
+}
 /* HERO */
-
+.visi-text h1 {
+    text-align : center;
+    margin : 20px 0 0 0;
+    
+}   
 .hero {
     position: relative;
     height: 100vh;
@@ -143,12 +179,14 @@ hr {
 }
 
 .card {
+    flex : 1;
     background: white;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     transition: 0.3s;
-    text-align: left;
+    text-align: center;
+    padding-top: 5%;
 }
 
 .card img {
