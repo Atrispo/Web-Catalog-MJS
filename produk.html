@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matahari Jaya Steel</title>
+    <title>Produk - Matahari Jaya Steel</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -22,3 +22,126 @@
         <li><a href="kontak.html">Kontak</a></li>
     </ul>
 </nav>
+
+<!-- KATALOG -->
+<section class="products">
+    <h2><u>Katalog Produk</u></h2>
+
+    <div class="product-container">
+
+        <div class="card" onclick="showProduk('plat')">
+            <img src="image/besi.webp">
+            <h3>Plat</h3>
+        </div>
+
+        <div class="card" onclick="showProduk('siku')">
+            <img src="image/besi.webp">
+            <h3>Siku</h3>
+        </div>
+
+        <div class="card" onclick="showProduk('hollow')">
+            <img src="image/besi.webp">
+            <h3>Hollow</h3>
+        </div>
+
+        <div class="card" onclick="showProduk('pipa')">
+            <img src="image/besi.webp">
+            <h3>Pipa Hitam</h3>
+        </div>
+
+        <div class="card" onclick="showProduk('beton')">
+            <img src="image/besi.webp">
+            <h3>Besi Beton</h3>
+        </div>
+
+    </div>
+
+    <!-- DETAIL PRODUK -->
+    <div id="detail-produk" class="detail-box">
+        <h3 id="judul"></h3>
+        <ul id="list"></ul>
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 Matahari Jaya Steel</p>
+</footer>
+
+<!-- SCRIPT -->
+<script>
+function showProduk(kategori) {
+    const judul = document.getElementById("judul");
+    const list = document.getElementById("list");
+
+    let data = [];
+
+    if(kategori === "plat"){
+        judul.innerText = "Plat";
+        data = [
+            "Plat 1 x 4 x 8",
+            "Plat 2 x 4 x 8",
+            "Plat 3 x 4 x 8",
+            "Plat 4 x 4 x 8",
+            "Plat 5 x 4 x 8"
+        ];
+    }
+
+    if(kategori === "siku"){
+        judul.innerText = "Siku";
+        data = [
+            "Siku 25 x 6",
+            "Siku 30 x 6",
+            "Siku 40 x 6",
+            "Siku 50 x 6",
+            "Siku 100 x 6"
+        ];
+    }
+
+    if(kategori === "hollow"){
+        judul.innerText = "Hollow Galvanis & Galvanil";
+        data = [
+            "Hollow 15 x 15 x 5,7",
+            "Hollow 20 x 20 x 5,7",
+            "Hollow 30 x 30 x 5,7",
+            "Hollow 40 x 40 x 5,7",
+            "Hollow 20 x 40 x 5,7"
+        ];
+    }
+
+    if(kategori === "pipa"){
+        judul.innerText = "Pipa Hitam";
+        data = [
+            "Pipa 1/2\" x 6",
+            "Pipa 1\" x 6",
+            "Pipa 2\" x 6",
+            "Pipa 3\" x 6",
+            "Pipa 4\" x 6"
+        ];
+    }
+
+    if(kategori === "beton"){
+        judul.innerText = "Besi Beton";
+        data = [
+            "Beton 6 x 9",
+            "Beton 8 x 10",
+            "Beton 10 x 10",
+            "Beton 12 x 10",
+            "Beton 14 x 10"
+        ];
+    }
+
+    // tampilkan list
+    list.innerHTML = "";
+    data.forEach(item => {
+        let li = document.createElement("li");
+        li.textContent = item;
+        list.appendChild(li);
+    });
+
+    document.getElementById("detail-produk").style.display = "block";
+}
+</script>
+
+</body>
+</html>
