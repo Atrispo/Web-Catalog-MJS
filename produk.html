@@ -4,72 +4,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produk - Matahari Jaya Steel</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="CSS/global.css">
+    <link rel="stylesheet" href="CSS/produk.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <!-- NAVBAR -->
-<nav>
-    <div class="logo">
-        <img src="Image/logo.png" alt="Logo">
-        <span>Matahari Jaya Steel</span>
-    </div>
-
-    <ul>
-        <li><a href="index.html">Beranda</a></li>
-        <li><a href="produk.html">Produk</a></li>
-        <li><a href="tentang.html">Tentang</a></li>
-        <li><a href="kontak.html">Kontak</a></li>
-    </ul>
-</nav>
+    <nav>
+        <div class="logo">
+            <img src="Image/logo.png" alt="Logo">
+            <span>Matahari Jaya Steel</span>
+        </div>
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="produk.html">Produk</a></li>
+            <li><a href="tentang.html">Tentang</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+    </nav>
+    <hr>
 
 <!-- KATALOG -->
-<section class="products">
-    <h2><u>Katalog Produk</u></h2>
+    <section class="products">
+        <h2>Katalog Produk</h2>
 
-    <div class="product-container">
+        <div class="product-container">
 
-        <div class="card" onclick="showProduk('plat')">
-            <img src="image/besi.webp">
-            <h3>Plat</h3>
+            <div class="product-card">
+                <img src="image/besi.webp">
+                <h3>Plat</h3>
+                <ul>
+                    <li>Plat 1 x 4 x 8</li>
+                    <li>Plat 2 x 4 x 8</li>
+                    <li>Plat 3 x 4 x 8</li>
+                    <li>Plat 4 x 4 x 8</li>
+                    <li>Plat 5 x 4 x 8</li>
+                </ul>
+            </div>
+
+            <div class="product-card">
+                <img src="image/besi.webp">
+                <h3>Siku</h3>
+                <ul>
+                    <li>Plat 1 x 4 x 8</li>
+                    <li>Plat 2 x 4 x 8</li>
+                    <li>Plat 3 x 4 x 8</li>
+                    <li>Plat 4 x 4 x 8</li>
+                    <li>Plat 5 x 4 x 8</li>
+                </ul>
+            </div>
+
+            <div class="product-card">
+                <img src="image/besi.webp">
+                <h3>Hollow</h3>
+                <ul>
+                    <li>Plat 1 x 4 x 8</li>
+                    <li>Plat 2 x 4 x 8</li>
+                    <li>Plat 3 x 4 x 8</li>
+                    <li>Plat 4 x 4 x 8</li>
+                    <li>Plat 5 x 4 x 8</li>
+                </ul>
+            </div>
+
+            <div class="product-card">
+                <img src="image/besi.webp">
+                <h3>Pipa Hitam</h3>
+                <ul>
+                    <li>Plat 1 x 4 x 8</li>
+                    <li>Plat 2 x 4 x 8</li>
+                    <li>Plat 3 x 4 x 8</li>
+                    <li>Plat 4 x 4 x 8</li>
+                    <li>Plat 5 x 4 x 8</li>
+                </ul>
+            </div>
+
+            <div class="product-card">
+                <img src="image/besi.webp">
+                <h3>Besi Beton</h3>
+                <ul>
+                    <li>Plat 1 x 4 x 8</li>
+                    <li>Plat 2 x 4 x 8</li>
+                    <li>Plat 3 x 4 x 8</li>
+                    <li>Plat 4 x 4 x 8</li>
+                    <li>Plat 5 x 4 x 8</li>
+                </ul>
+            </div>
         </div>
+    </section>
 
-        <div class="card" onclick="showProduk('siku')">
-            <img src="image/besi.webp">
-            <h3>Siku</h3>
-        </div>
-
-        <div class="card" onclick="showProduk('hollow')">
-            <img src="image/besi.webp">
-            <h3>Hollow</h3>
-        </div>
-
-        <div class="card" onclick="showProduk('pipa')">
-            <img src="image/besi.webp">
-            <h3>Pipa Hitam</h3>
-        </div>
-
-        <div class="card" onclick="showProduk('beton')">
-            <img src="image/besi.webp">
-            <h3>Besi Beton</h3>
-        </div>
-
-    </div>
-
-    <!-- DETAIL PRODUK -->
-    <div id="detail-produk" class="detail-box">
-        <h3 id="judul"></h3>
-        <ul id="list"></ul>
-    </div>
-
-</section>
-
-<footer>
+    <footer>
     <p>© 2026 Matahari Jaya Steel</p>
-</footer>
+    </footer>
+
+</body>
+</html>
+
 
 <!-- SCRIPT -->
-<script>
+<!-- <script>
 function showProduk(kategori) {
     const judul = document.getElementById("judul");
     const list = document.getElementById("list");
@@ -141,7 +176,4 @@ function showProduk(kategori) {
 
     document.getElementById("detail-produk").style.display = "block";
 }
-</script>
-
-</body>
-</html>
+</script> -->

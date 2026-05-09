@@ -1,0 +1,68 @@
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url('../image/besi.webp') no-repeat center/cover;
+    display: flex;
+    align-items: center;
+    padding: 50px 80px;
+    color: white;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+    max-width: 500px;
+}
+
+.hero-text h1 {
+    font-size: 60px;
+}
+
+/* PRODUK */
+
+.products {
+    padding: 60px;
+    text-align: center;
+}
+
+.products h2 {
+    margin-bottom: 20px;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.product-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.product-card h3 {
+    margin-top: 15px;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
