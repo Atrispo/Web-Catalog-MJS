@@ -3,22 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matahari Jaya Steel</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Produk - Matahari Jaya Steel</title>
+    <link rel="stylesheet" href="CSS/global.css">
+    <link rel="stylesheet" href="CSS/produk.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <!-- NAVBAR -->
-<nav>
-    <div class="logo">
-        <img src="Image/logo.png" alt="Logo">
-        <span>Matahari Jaya Steel</span>
-    </div>
+    <nav>
+        <div class="logo">
+            <img src="Image/logo.png" alt="Logo">
+            <span>Matahari Jaya Steel</span>
+        </div>
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="produk.html">Produk</a></li>
+            <li><a href="tentang.html">Tentang</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+    </nav>
+    <hr>
 
-    <ul>
-        <li><a href="index.html">Beranda</a></li>
-        <li><a href="produk.html">Produk</a></li>
-        <li><a href="tentang.html">Tentang</a></li>
-        <li><a href="kontak.html">Kontak</a></li>
-    </ul>
-</nav>
+<!-- KATALOG -->
+    <section class="products">
+        <h2>Katalog Produk</h2>
+
+        <div class="product-container">
+
+            <div class="product-card">
+                <img src="Image/plat.webp">
+                <h3>Plat</h3>
+                <ul>
+                    <li>Plat 1 x 4 x 8</li>
+                    <li>Plat 2 x 4 x 8</li>
+                    <li>Plat 3 x 4 x 8</li>
+                    <li>Plat 4 x 4 x 8</li>
+                    <li>Plat 5 x 4 x 8</li>
+                </ul>
+            </div>
+
+            <div class="product-card">
+                <img src="Image/siku.jpg">
+                <h3>Siku</h3>
+                <ul>
+                    <li>Siku 25 x 3 x 6 mtr</li>
+                    <li>Siku 30 x 3 x 6 mtr</li>
+                    <li>Siku 40 x 3 x 6 mtr</li>
+                    <li>Siku 50 x 5 x 6 mtr</li>
+                    <li>Siku 65 x 6 x 6 mtr</li>
+                </ul>
+            </div>
+
+            <div class="product-card">
+                <img src="Image/hollow.jpg">
+                <h3>Hollow</h3>
+                <ul>
+                    <li>Hollow 20 x 20 x 5,7 / 6 mtr</li>
+                    <li>Hollow 30 x 30 x 5,7 / 6 mtr</li>
+                    <li>Hollow 40 x 40 x 5,7 / 6 mtr</li>
+                    <li>Hollow 50 x 100 x 5,7 / 6 mtr</li>
+                    <li>Hollow 100 x 100 x 5,7 /6 mtr</li>
+                </ul>
+            </div>
+
+            <div class="product-card">
+                <img src="Image/pipa hitam.webp">
+                <h3>Pipa Hitam</h3>
+                <ul>
+                    <li>Pipa hitam 3/4" x 6 mtr</li>
+                    <li>Pipa hitam 1" x 6 mtr</li>
+                    <li>Pipa hitam 1-1/2" x 6 mtr</li>
+                    <li>Pipa hitam 2" x 6 mtr</li>
+                    <li>Pipa hitam 3" x 6 mtr</li>
+                </ul>
+            </div>
+
+            <div class="product-card">
+                <img src="Image/beton.jpg">
+                <h3>Besi Beton</h3>
+                <ul>
+                    <li>Beton 6 x 9 mtr</li>
+                    <li>Beton 8 x 10 mtr</li>
+                    <li>Beton 10 x 10 mtr</li>
+                    <li>Beton 12 x 10 mtr</li>
+                    <li>Beton 14 x 10 mtr</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+    <p>© 2026 Matahari Jaya Steel</p>
+    </footer>
+
+</body>
+</html>
+
+
+<!-- SCRIPT -->
+<!-- <script>
+function showProduk(kategori) {
+    const judul = document.getElementById("judul");
+    const list = document.getElementById("list");
+
+    let data = [];
+
+    if(kategori === "plat"){
+        judul.innerText = "Plat";
+        data = [
+            "Plat 1 x 4 x 8",
+            "Plat 2 x 4 x 8",
+            "Plat 3 x 4 x 8",
+            "Plat 4 x 4 x 8",
+            "Plat 5 x 4 x 8"
+        ];
+    }
+
+    if(kategori === "siku"){
+        judul.innerText = "Siku";
+        data = [
+            "Siku 25 x 6",
+            "Siku 30 x 6",
+            "Siku 40 x 6",
+            "Siku 50 x 6",
+            "Siku 100 x 6"
+        ];
+    }
+
+    if(kategori === "hollow"){
+        judul.innerText = "Hollow Galvanis & Galvanil";
+        data = [
+            "Hollow 15 x 15 x 5,7",
+            "Hollow 20 x 20 x 5,7",
+            "Hollow 30 x 30 x 5,7",
+            "Hollow 40 x 40 x 5,7",
+            "Hollow 20 x 40 x 5,7"
+        ];
+    }
+
+    if(kategori === "pipa"){
+        judul.innerText = "Pipa Hitam";
+        data = [
+            "Pipa 1/2\" x 6",
+            "Pipa 1\" x 6",
+            "Pipa 2\" x 6",
+            "Pipa 3\" x 6",
+            "Pipa 4\" x 6"
+        ];
+    }
+
+    if(kategori === "beton"){
+        judul.innerText = "Besi Beton";
+        data = [
+            "Beton 6 x 9",
+            "Beton 8 x 10",
+            "Beton 10 x 10",
+            "Beton 12 x 10",
+            "Beton 14 x 10"
+        ];
+    }
+
+    // tampilkan list
+    list.innerHTML = "";
+    data.forEach(item => {
+        let li = document.createElement("li");
+        li.textContent = item;
+        list.appendChild(li);
+    });
+
+    document.getElementById("detail-produk").style.display = "block";
+}
+</script> -->

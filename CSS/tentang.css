@@ -1,0 +1,46 @@
+.mid {
+    position: relative;
+    height: 100vh;
+    background: url('../image/toko.jpg') no-repeat center/cover;
+    display: flex;
+    align-items: center;
+    padding: 50px 80px;
+    color: white;
+}
+
+.mid::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+}
+
+.mid-text {
+    position: relative;
+    z-index: 1;
+    width: 50%;
+    margin-left: auto;
+    text-align: right;
+}
+
+.visi {
+    padding: 60px;
+}
+
+.visi-text {
+    display: flex;
+    gap: 20px;
+}
+
+.visi-card {
+    flex: 1;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.visi-card h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
