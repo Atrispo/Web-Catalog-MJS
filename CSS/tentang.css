@@ -94,6 +94,7 @@
 .keunggulan .item:hover {
     background: #ff9800;
     color: white;
+    transition : 1s
 }
 @media (max-width: 768px) {
 
