@@ -44,3 +44,106 @@
     text-align: center;
     margin-bottom: 20px;
 }
+.sejarah {
+    padding: 100px 20px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.sejarah-text {
+    margin: auto;
+}
+
+.sejarah-text h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    position: center;
+}
+
+
+.sejarah-text p {
+    font-size: 16px;
+    color : #666666;
+    line-height: 1.5;
+}
+
+.keunggulan {
+    padding : 80px 60px
+}
+
+.keunggulan h1{
+    margin-bottom : 40px
+}
+
+.keunggulan-list {
+    display : flex;
+    justify-content : center;
+    gap : 30px;
+    flex-wrap : wrap
+}
+
+.keunggulan .item {
+    background: #ffffff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    font-weight: 400;
+    transition: 0.3s;
+}
+
+.keunggulan .item:hover {
+    background: #ff9800;
+    color: white;
+}
+@media (max-width: 768px) {
+
+    .mid {
+        height: auto;
+        padding: 40px 20px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .mid-text {
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .mid-text h1 {
+        font-size: 28px;
+    }
+
+    .mid-text p {
+        font-size: 14px;
+    }
+
+    .visi {
+        padding: 30px 15px;
+    }
+
+    .visi-text {
+        flex-direction: column;
+    }
+
+    .visi-card {
+        padding: 20px;
+    }
+
+    .visi-card h1 {
+        font-size: 20px;
+    }
+
+    .visi-card p {
+        font-size: 14px;
+    }
+    .keunggulan-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    footer {
+        text-align: center;
+        padding: 15px;
+        font-size: 14px;
+    }
+}
