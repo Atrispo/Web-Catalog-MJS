@@ -41,6 +41,10 @@ nav {
     object-fit: contain;
 }
 
+.logo a {
+    text-decoration: none;
+    color: black
+}
 nav span a {
     text-decoration: none;
     color: black;
