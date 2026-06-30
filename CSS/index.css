@@ -37,9 +37,12 @@
 }
 
 .product-container {
-    display: flex;
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    padding: 40px;
     justify-content: center;
-    gap: 30px;
+    margin-top: 40px;
 }
 
 .product-card {

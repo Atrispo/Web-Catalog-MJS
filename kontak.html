@@ -26,7 +26,7 @@
             <li><a href="kontak.html">Kontak</a></li>
         </ul>
     </nav>
-    <hr>
+    
 
     <section class="contact">
         <h2>Hubungi Kami</h2>
@@ -43,12 +43,60 @@
             <p>📞 WhatsApp: 0821-6452-8828</p>
             <p>📧 Email: <a href="https://gmail.com">mataharijayasteel@gmail.com</a></p>
         </div>
+
+        <div class="enquiry-section">
+            <h3>Formulir Pertanyaan</h3>
+
+            <p class="enquiry-text">
+                Memiliki pertanyaan mengenai produk atau layanan kami?
+                Silakan isi formulir di bawah ini, dan tim Matahari Jaya Steel akan segera menghubungi Anda.
+            </p>
+
+            <form class="enquiry-form" onsubmit="return validasiForm()">
+
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap<span>*</span></label>
+                    <input type="text" id="nama" name="nama">
+                </div>
+
+                <div class="form-group">
+                    <label for="company">Nama Perusahaan</label>
+                    <input type="text" id="perusahaan" name="perusahaan">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Alamat Email<span>*</span></label>
+                    <input type="email" id="email" name="email">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Nomor WhatsApp<span>*</span></label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subjek<span>*</span></label>
+                    <input type="text" id="subject" name="subject">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Pesan<span>*</span></label>
+                    <textarea id="message" name="message" rows="6"></textarea>
+                </div>
+    
+                <button type="submit" class="btn-submit">
+                    Submit
+                </button>
+
+            </form>
+        </div>
+
     </section>
 
     <!-- FOOTER -->
     <footer>
         <p>© 2026 Matahari Jaya Steel</p>
     </footer>
-
+<script src="JS/script.js"></script>
 </body>
 </html>

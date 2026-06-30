@@ -5,8 +5,10 @@
 }
 
 .product-container {
-    display: flex;
-    gap: 30px;
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    padding: 40px;
     justify-content: center;
     margin-top: 40px;
 }
