@@ -117,3 +117,44 @@ document.addEventListener("DOMContentLoaded", function () {
     tampilRiwayat();
 
 });
+
+
+function validasiPesanan() {
+    const nama = document.getElementById("nama").value.trim();
+    const perusahaan = document.getElementById("perusahaan").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const produk = document.getElementById("produk").value;
+    const ukuran = document.getElementById("ukuran").value.trim();
+    const jumlah = document.getElementById("jumlah").value.trim();
+    const alamat = document.getElementById("alamat").value.trim();
+
+    if (
+        nama === "" ||
+        email === "" ||
+        phone === "" ||
+        produk === "" ||
+        ukuran === "" ||
+        jumlah === "" ||
+        alamat === ""
+    ) {
+        Swal.fire({
+            icon: "error",
+            title: "Data Belum Lengkap",
+            text: "Mohon isi semua data terlebih dahulu."
+        });
+
+        return false;
+    }
+
+    Swal.fire({
+        icon: "success",
+        title: "Pesanan Berhasil!",
+        text: "Terima kasih, pesanan Anda telah berhasil dikirim."
+    });
+
+    document.getElementById("formPesan").reset();
+
+    return false;
+}
+
