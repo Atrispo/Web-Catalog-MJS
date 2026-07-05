@@ -1,3 +1,12 @@
+function getData() {
+    const raw = localStorage.getItem("pertanyaan_data");
+    return raw ? JSON.parse(raw) : [];
+}
+
+function saveData(data) {
+    localStorage.setItem("pertanyaan_data", JSON.stringify(data));
+}
+
 function validasiForm() {
     const nama = document.getElementById("nama").value.trim();
     const perusahaan = document.getElementById("perusahaan").value.trim();
@@ -37,6 +46,21 @@ function validasiForm() {
         return false;
     }
 
+    let data = getData();
+
+    const item = {
+        nama: nama,
+        perusahaan: perusahaan,
+        email: email,
+        phone: phone,
+        subject: subject,
+        message: message
+    };
+
+    data.push(item);
+
+    saveData(data);
+
     alert(
         "Pertanyaan berhasil dikirim!\n\n" +
         "Nama : " + nama + "\n" +
@@ -48,13 +72,48 @@ function validasiForm() {
     );
 
     console.log("Data Formulir:", {
-    nama: nama,
-    perusahaan: perusahaan,
-    email: email,
-    whatsapp: phone,
-    subjek: subject,
-    pesan: message
+        nama: nama,
+        perusahaan: perusahaan,
+        email: email,
+        whatsapp: phone,
+        subjek: subject,
+        pesan: message
     });
+
+    document.querySelector(".enquiry-form").reset();
 
     return false;
 }
+
+function tampilRiwayat() {
+
+    const tbody = document.getElementById("tableBody");
+
+    if (!tbody) return;
+
+    const data = getData();
+
+    tbody.innerHTML = "";
+
+    for (let i = 0; i < data.length; i++) {
+
+        const item = data[i];
+
+        const tr = document.createElement("tr");
+
+        tr.innerHTML =
+            "<td>" + (i + 1) + "</td>" +
+            "<td>" + item.nama + "</td>" +
+            "<td>" + item.email + "</td>" +
+            "<td>" + item.phone + "</td>" +
+            "<td>" + item.subject + "</td>"+
+            "<td>"+item.message+"</td>";
+        tbody.appendChild(tr);
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    tampilRiwayat();
+
+});

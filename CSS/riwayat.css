@@ -1,0 +1,77 @@
+.riwayat{
+    max-width:1200px;
+    margin:50px auto;
+    padding:0 20px;
+}
+
+.riwayat-header{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.riwayat-header h2{
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.riwayat-header p{
+    color:#666;
+}
+
+.table-card{
+    background:#fff;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.riwayat-table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.riwayat-table thead{
+    background:#b8860b;
+    color:#fff;
+}
+
+.riwayat-table th{
+    padding:15px;
+}
+
+.riwayat-table td{
+    padding:15px;
+    border-bottom:1px solid #eee;
+    vertical-align:top;
+}
+
+.riwayat-table tbody tr:hover{
+    background:#fafafa;
+}
+
+.riwayat-table td:last-child{
+    max-width:350px;
+    white-space:normal;
+    word-break:break-word;
+    line-height:1.5;
+}
+
+.button-area{
+    text-align: center;
+    margin: 35px 0;
+}
+
+.btn-kembali{
+    padding: 12px 28px;
+    border: 2px solid #b8860b;
+    color: #b8860b;
+    background: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.btn-kembali:hover{
+    background: #b8860b;
+    color: white;
+}
+

@@ -136,3 +136,27 @@
     background: #9a6f08;
 }
 
+.form-button{
+    display:flex;
+    gap:15px;
+    margin-top:10px;
+}
+
+.form-button button,
+.form-button a{
+    flex:1;
+}
+
+.btn-riwayat{
+    background:#334155;
+    color:white;
+    text-decoration:none;
+    padding:14px;
+    border-radius:8px;
+    text-align:center;
+    transition:.3s;
+}
+
+.btn-riwayat:hover{
+    background:#1e293b;
+}
