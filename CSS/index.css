@@ -66,6 +66,12 @@
     margin-top: 15px;
 }
 
+.product-card a{
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
 .product-card:hover {
     transform: translateY(-5px);
 }

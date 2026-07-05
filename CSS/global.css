@@ -89,3 +89,29 @@ footer {
     color: white;
 }
 
+.produk-menu{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin:25px 0 5px;
+}
+
+.btn-menu{
+    text-decoration:none;
+    padding:12px 28px;
+    border:2px solid #b8860b;
+    border-radius:8px;
+    color:#b8860b;
+    background:#fff;
+    font-weight:600;
+}
+
+.btn-menu:hover{
+    background:#b8860b;
+    color:#fff;
+}
+
+.btn-menu.active{
+    background:#b8860b;
+    color:#fff;
+}
