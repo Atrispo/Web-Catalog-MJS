@@ -4,120 +4,190 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produk - Matahari Jaya Steel</title>
-    <link rel="stylesheet" href="CSS/global.css">
-    <link rel="stylesheet" href="CSS/produk.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Poppins', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
+<body class="font-sans font-semibold m-0 p-0 box-border text-black flex flex-col min-h-screen bg-gray-50">
 
-<!-- NAVBAR -->
-    <nav>
-        <div class="logo">
-            <img src="Image/logo.png" alt="Logo">
-            <span><a href ="index.html">Matahari Jaya Steel</a></span>
+    <nav class="flex flex-wrap justify-between items-center px-[20px] md:px-[50px] py-[15px] bg-white sticky top-0 z-[1000] shadow-[0_10px_30px_rgba(0,0,0,0.18)]">
+        <div class="flex items-center gap-[10px] text-[20px] md:text-[25px] font-bold">
+            <img src="Image/logo.png" alt="Logo" class="w-[40px] h-[40px] object-contain">
+            <span><a href="index.html" class="text-black no-underline">Matahari Jaya Steel</a></span>
         </div>
-        
-        <ul>
-            <li><a href="index.html">Beranda</a></li>
-            <li><a href="produk.html">Produk</a></li>
-            <li><a href="tentang.html">Tentang</a></li>
-            <li><a href="kontak.html">Kontak</a></li>
+
+        <button id="hamburgerBtn" class="md:hidden block text-3xl focus:outline-none cursor-pointer">
+            &#9776;
+        </button>
+
+        <ul id="mobileMenu" class="hidden md:flex flex-col md:flex-row w-full md:w-auto list-none m-0 p-0 mt-4 md:mt-0 text-center md:text-left gap-4 md:gap-0 pb-4 md:pb-0">
+            <li class="md:ml-[20px]"><a href="index.html" class="block text-black no-underline font-bold relative md:after:content-[''] md:after:absolute md:after:w-0 md:after:h-[2px] md:after:bg-black md:after:left-0 md:after:-bottom-[5px] md:after:transition-all md:after:duration-300 hover:md:after:w-full hover:text-[#b8860b] md:hover:text-black transition-colors">Beranda</a></li>
+            <li class="md:ml-[20px]"><a href="produk.html" class="block text-black no-underline font-bold relative md:after:content-[''] md:after:absolute md:after:w-0 md:after:h-[2px] md:after:bg-black md:after:left-0 md:after:-bottom-[5px] md:after:transition-all md:after:duration-300 hover:md:after:w-full hover:text-[#b8860b] md:hover:text-black transition-colors">Produk</a></li>
+            <li class="md:ml-[20px]"><a href="tentang.html" class="block text-black no-underline font-bold relative md:after:content-[''] md:after:absolute md:after:w-0 md:after:h-[2px] md:after:bg-black md:after:left-0 md:after:-bottom-[5px] md:after:transition-all md:after:duration-300 hover:md:after:w-full hover:text-[#b8860b] md:hover:text-black transition-colors">Tentang</a></li>
+            <li class="md:ml-[20px]"><a href="kontak.html" class="block text-black no-underline font-bold relative md:after:content-[''] md:after:absolute md:after:w-0 md:after:h-[2px] md:after:bg-black md:after:left-0 md:after:-bottom-[5px] md:after:transition-all md:after:duration-300 hover:md:after:w-full hover:text-[#b8860b] md:hover:text-black transition-colors">Kontak</a></li>
         </ul>
     </nav>
     
-    <div class="produk-menu">
-        <a href="produk.html" class="btn-menu active">
-            📋 Katalog Produk
-        </a>
+    <main class="flex-1 w-full">
+        
+        <section class="bg-black text-white py-[40px] px-[20px] text-center">
+            <h1 class="text-[28px] md:text-[40px] font-bold mb-[10px]">Katalog Produk</h1>
+            <p class="text-gray-300 font-normal text-[14px] md:text-base max-w-[600px] mx-auto">Temukan berbagai material besi dan baja berkualitas premium untuk kebutuhan konstruksi Anda.</p>
+        </section>
 
-        <a href="pesan.html" class="btn-menu">
-            🛒 Pesan Produk
-        </a>
-    </div>
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-[15px] m-[30px_20px_10px]">
+            <a href="produk.html" class="no-underline w-full sm:w-auto text-center p-[12px_30px] border-2 border-[#b8860b] rounded-full text-white bg-[#b8860b] font-semibold text-sm md:text-base transition-colors shadow-md">
+                📋 Katalog Produk
+            </a>
+            <a href="pesan.html" class="no-underline w-full sm:w-auto text-center p-[12px_30px] border-2 border-[#b8860b] rounded-full text-[#b8860b] bg-white hover:bg-[#b8860b] hover:text-white font-semibold text-sm md:text-base transition-colors">
+                🛒 Pesan Produk
+            </a>
+        </div>
 
-<!-- KATALOG -->
-    <section class="products">
-        <div class="product-container">
-            <div class="product-card">
-                <img src="Image/plat.webp">
-                <h3>Plat</h3>
-                <ul>
-                    <li>Plat 1 x 4 x 8</li>
-                    <li>Plat 2 x 4 x 8</li>
-                    <li>Plat 3 x 4 x 8</li>
-                    <li>Plat 4 x 4 x 8</li>
-                    <li>Plat 5 x 4 x 8</li>
+        <section class="p-[20px] md:p-[20px_60px_60px] text-center w-full max-w-[1200px] mx-auto">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[30px] justify-center mt-[20px] md:mt-[30px]">
+                
+                <div class="bg-white rounded-[15px] overflow-hidden shadow-lg transition-all duration-300 hover:-translate-y-[8px] hover:shadow-2xl text-center pb-[25px] group border border-gray-100">
+                    <div class="overflow-hidden">
+                        <img src="Image/plat.webp" alt="Plat" class="w-full h-[220px] object-cover block group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="mt-[20px] text-xl font-bold text-gray-800">Plat</h3>
+                    <ul class="text-center mt-[15px] text-[#555] font-normal list-none p-0 text-[14px] md:text-base space-y-2 px-[20px]">
+                        <li class="border-b border-gray-100 pb-1">Plat 1 x 4 x 8</li>
+                        <li class="border-b border-gray-100 pb-1">Plat 2 x 4 x 8</li>
+                        <li class="border-b border-gray-100 pb-1">Plat 3 x 4 x 8</li>
+                        <li class="border-b border-gray-100 pb-1">Plat 4 x 4 x 8</li>
+                        <li>Plat 5 x 4 x 8</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-[15px] overflow-hidden shadow-lg transition-all duration-300 hover:-translate-y-[8px] hover:shadow-2xl text-center pb-[25px] group border border-gray-100">
+                    <div class="overflow-hidden">
+                        <img src="Image/siku.jpg" alt="Siku" class="w-full h-[220px] object-cover block group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="mt-[20px] text-xl font-bold text-gray-800">Siku</h3>
+                    <ul class="text-center mt-[15px] text-[#555] font-normal list-none p-0 text-[14px] md:text-base space-y-2 px-[20px]">
+                        <li class="border-b border-gray-100 pb-1">Siku 25 x 3 x 6 mtr</li>
+                        <li class="border-b border-gray-100 pb-1">Siku 30 x 3 x 6 mtr</li>
+                        <li class="border-b border-gray-100 pb-1">Siku 40 x 3 x 6 mtr</li>
+                        <li class="border-b border-gray-100 pb-1">Siku 50 x 5 x 6 mtr</li>
+                        <li>Siku 65 x 6 x 6 mtr</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-[15px] overflow-hidden shadow-lg transition-all duration-300 hover:-translate-y-[8px] hover:shadow-2xl text-center pb-[25px] group border border-gray-100">
+                    <div class="overflow-hidden">
+                        <img src="Image/hollow.jpg" alt="Hollow" class="w-full h-[220px] object-cover block group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="mt-[20px] text-xl font-bold text-gray-800">Hollow</h3>
+                    <ul class="text-center mt-[15px] text-[#555] font-normal list-none p-0 text-[14px] md:text-base space-y-2 px-[20px]">
+                        <li class="border-b border-gray-100 pb-1">Hollow 20 x 20 x 5,7 / 6 mtr</li>
+                        <li class="border-b border-gray-100 pb-1">Hollow 30 x 30 x 5,7 / 6 mtr</li>
+                        <li class="border-b border-gray-100 pb-1">Hollow 40 x 40 x 5,7 / 6 mtr</li>
+                        <li class="border-b border-gray-100 pb-1">Hollow 50 x 100 x 5,7 / 6 mtr</li>
+                        <li>Hollow 100 x 100 x 5,7 /6 mtr</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-[15px] overflow-hidden shadow-lg transition-all duration-300 hover:-translate-y-[8px] hover:shadow-2xl text-center pb-[25px] group border border-gray-100">
+                    <div class="overflow-hidden">
+                        <img src="Image/pipa hitam.webp" alt="Pipa Hitam" class="w-full h-[220px] object-cover block group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="mt-[20px] text-xl font-bold text-gray-800">Pipa Hitam</h3>
+                    <ul class="text-center mt-[15px] text-[#555] font-normal list-none p-0 text-[14px] md:text-base space-y-2 px-[20px]">
+                        <li class="border-b border-gray-100 pb-1">Pipa hitam 3/4" x 6 mtr</li>
+                        <li class="border-b border-gray-100 pb-1">Pipa hitam 1" x 6 mtr</li>
+                        <li class="border-b border-gray-100 pb-1">Pipa hitam 1-1/2" x 6 mtr</li>
+                        <li class="border-b border-gray-100 pb-1">Pipa hitam 2" x 6 mtr</li>
+                        <li>Pipa hitam 3" x 6 mtr</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-[15px] overflow-hidden shadow-lg transition-all duration-300 hover:-translate-y-[8px] hover:shadow-2xl text-center pb-[25px] group border border-gray-100">
+                    <div class="overflow-hidden">
+                        <img src="Image/beton.jpg" alt="Besi Beton" class="w-full h-[220px] object-cover block group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="mt-[20px] text-xl font-bold text-gray-800">Besi Beton</h3>
+                    <ul class="text-center mt-[15px] text-[#555] font-normal list-none p-0 text-[14px] md:text-base space-y-2 px-[20px]">
+                        <li class="border-b border-gray-100 pb-1">Beton 6 x 9 mtr</li>
+                        <li class="border-b border-gray-100 pb-1">Beton 8 x 10 mtr</li>
+                        <li class="border-b border-gray-100 pb-1">Beton 10 x 10 mtr</li>
+                        <li class="border-b border-gray-100 pb-1">Beton 12 x 10 mtr</li>
+                        <li>Beton 14 x 10 mtr</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-[15px] overflow-hidden shadow-lg transition-all duration-300 hover:-translate-y-[8px] hover:shadow-2xl text-center pb-[25px] group border border-gray-100">
+                    <div class="overflow-hidden">
+                        <img src="Image/cnp.jpg" alt="CNP" class="w-full h-[220px] object-cover block group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <h3 class="mt-[20px] text-xl font-bold text-gray-800">CNP</h3>
+                    <ul class="text-center mt-[15px] text-[#555] font-normal list-none p-0 text-[14px] md:text-base space-y-2 px-[20px]">
+                        <li class="border-b border-gray-100 pb-1">CNP 75 x 35 x 2 x 6</li>
+                        <li class="border-b border-gray-100 pb-1">CNP 100 x 50 x 2 x 6</li>
+                        <li class="border-b border-gray-100 pb-1">CNP 125 x 50 x 2 x 6</li>
+                        <li class="border-b border-gray-100 pb-1">CNP 150 x 50 x 2 x 6</li>
+                        <li>CNP 200 x 75 x 3,2 x 6</li>
+                    </ul>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-black text-gray-300 w-full pt-[40px] pb-[20px] px-[20px] md:px-[50px] mt-auto">
+        <div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-[30px] md:gap-[50px] mb-[30px]">
+            <div>
+                <h3 class="text-white text-lg font-bold mb-[15px]">Matahari Jaya Steel</h3>
+                <p class="text-sm leading-relaxed mb-[15px] font-normal">Penyedia material besi dan baja terpercaya untuk kebutuhan konstruksi Anda. Kualitas premium, harga kompetitif.</p>
+            </div>
+            
+            <div>
+                <h3 class="text-white text-lg font-bold mb-[15px]">Tautan Cepat</h3>
+                <ul class="list-none p-0 flex flex-col gap-[10px] text-sm font-normal">
+                    <li><a href="index.html" class="text-gray-300 no-underline hover:text-[#b8860b] transition-colors">Beranda</a></li>
+                    <li><a href="produk.html" class="text-gray-300 no-underline hover:text-[#b8860b] transition-colors">Katalog Produk</a></li>
+                    <li><a href="tentang.html" class="text-gray-300 no-underline hover:text-[#b8860b] transition-colors">Tentang Kami</a></li>
+                    <li><a href="kontak.html" class="text-gray-300 no-underline hover:text-[#b8860b] transition-colors">Hubungi Kami</a></li>
                 </ul>
             </div>
-
-            <div class="product-card">
-                <img src="Image/siku.jpg">
-                <h3>Siku</h3>
-                <ul>
-                    <li>Siku 25 x 3 x 6 mtr</li>
-                    <li>Siku 30 x 3 x 6 mtr</li>
-                    <li>Siku 40 x 3 x 6 mtr</li>
-                    <li>Siku 50 x 5 x 6 mtr</li>
-                    <li>Siku 65 x 6 x 6 mtr</li>
-                </ul>
-            </div>
-
-            <div class="product-card">
-                <img src="Image/hollow.jpg">
-                <h3>Hollow</h3>
-                <ul>
-                    <li>Hollow 20 x 20 x 5,7 / 6 mtr</li>
-                    <li>Hollow 30 x 30 x 5,7 / 6 mtr</li>
-                    <li>Hollow 40 x 40 x 5,7 / 6 mtr</li>
-                    <li>Hollow 50 x 100 x 5,7 / 6 mtr</li>
-                    <li>Hollow 100 x 100 x 5,7 /6 mtr</li>
-                </ul>
-            </div>
-
-            <div class="product-card">
-                <img src="Image/pipa hitam.webp">
-                <h3>Pipa Hitam</h3>
-                <ul>
-                    <li>Pipa hitam 3/4" x 6 mtr</li>
-                    <li>Pipa hitam 1" x 6 mtr</li>
-                    <li>Pipa hitam 1-1/2" x 6 mtr</li>
-                    <li>Pipa hitam 2" x 6 mtr</li>
-                    <li>Pipa hitam 3" x 6 mtr</li>
-                </ul>
-            </div>
-
-            <div class="product-card">
-                <img src="Image/beton.jpg">
-                <h3>Besi Beton</h3>
-                <ul>
-                    <li>Beton 6 x 9 mtr</li>
-                    <li>Beton 8 x 10 mtr</li>
-                    <li>Beton 10 x 10 mtr</li>
-                    <li>Beton 12 x 10 mtr</li>
-                    <li>Beton 14 x 10 mtr</li>
-                </ul>
-            </div>
-
-            <div class="product-card">
-                <img src="Image/cnp.jpg">
-                <h3>CNP</h3>
-                <ul>
-                    <li>CNP 75 x 35 x 2 x 6</li>
-                    <li>CNP 100 x 50 x 2 x 6</li>
-                    <li>CNP 125 x 50 x 2 x 6</li>
-                    <li>CNP 150 x 50 x 2 x 6</li>
-                    <li>CNP 200 x 75 x 3,2 x 6</li>
+            
+            <div>
+                <h3 class="text-white text-lg font-bold mb-[15px]">Kontak Kami</h3>
+                <ul class="list-none p-0 flex flex-col gap-[10px] text-sm font-normal">
+                    <li class="flex items-start gap-[10px]">
+                        <span>📍</span>
+                        <span>Medan, Indonesia</span>
+                    </li>
+                    <li class="flex items-start gap-[10px]">
+                        <span>📞</span>
+                        <span>0821-6452-8828</span>
+                    </li>
+                    <li class="flex items-start gap-[10px]">
+                        <span>📧</span>
+                        <a href="mailto:mataharijayasteel@gmail.com" class="text-gray-300 hover:text-[#b8860b] transition-colors break-all">mataharijayasteel@gmail.com</a>
+                    </li>
                 </ul>
             </div>
         </div>
-    </section>
-
-    <footer>
-    <p>© 2026 Matahari Jaya Steel</p>
+        
+        <div class="border-t border-gray-800 pt-[20px] text-center text-sm font-normal">
+            <p>© 2026 Matahari Jaya Steel</p>
+        </div>
     </footer>
 
+    <script src="JS/script.js"></script>
 </body>
 </html>
-

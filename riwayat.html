@@ -3,44 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Riwayat Pertanyaan - Matahari Jaya Steel</title>
 
-    <link rel="stylesheet" href="CSS/global.css">
-    <link rel="stylesheet" href="CSS/riwayat.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Poppins', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
 </head>
+<body class="font-sans font-semibold m-0 p-0 box-border text-black flex flex-col min-h-screen bg-gray-50">
 
-<body>
-    <nav>
-        <div class="logo">
-            <img src="Image/logo.png" alt="Logo">
-            <span><a href="index.html">Matahari Jaya Steel</a></span>
+    <!-- NAVBAR (Global) -->
+    <nav class="flex justify-between items-center px-[20px] md:px-[50px] py-[15px] bg-white sticky top-0 z-[1000] shadow-[0_10px_30px_rgba(0,0,0,0.18)]">
+        <div class="flex items-center gap-[10px] text-[20px] md:text-[25px] font-bold">
+            <img src="Image/logo.png" alt="Logo" class="w-[40px] h-[40px] object-contain">
+            <span><a href="index.html" class="text-black no-underline">Matahari Jaya Steel</a></span>
         </div>
 
-        <ul>
-            <li><a href="index.html">Beranda</a></li>
-            <li><a href="produk.html">Produk</a></li>
-            <li><a href="tentang.html">Tentang</a></li>
-            <li><a href="kontak.html">Kontak</a></li>
+        <ul class="flex list-none m-0 p-0 hidden md:flex">
+            <li class="ml-[20px]"><a href="index.html" class="text-black no-underline font-bold relative after:content-[''] after:absolute after:w-0 after:h-[2px] after:bg-black after:left-0 after:-bottom-[5px] after:transition-all after:duration-300 hover:after:w-full">Beranda</a></li>
+            <li class="ml-[20px]"><a href="produk.html" class="text-black no-underline font-bold relative after:content-[''] after:absolute after:w-0 after:h-[2px] after:bg-black after:left-0 after:-bottom-[5px] after:transition-all after:duration-300 hover:after:w-full">Produk</a></li>
+            <li class="ml-[20px]"><a href="tentang.html" class="text-black no-underline font-bold relative after:content-[''] after:absolute after:w-0 after:h-[2px] after:bg-black after:left-0 after:-bottom-[5px] after:transition-all after:duration-300 hover:after:w-full">Tentang</a></li>
+            <li class="ml-[20px]"><a href="kontak.html" class="text-black no-underline font-bold relative after:content-[''] after:absolute after:w-0 after:h-[2px] after:bg-black after:left-0 after:-bottom-[5px] after:transition-all after:duration-300 hover:after:w-full">Kontak</a></li>
         </ul>
     </nav>
 
-
-    <section class="riwayat">
-
-        <div class="riwayat-header">
-            <h2>Riwayat Pertanyaan</h2>
-            <p>Daftar seluruh pertanyaan yang telah dikirim melalui formulir kontak.</p>
+    <!-- MAIN CONTENT -->
+    <main class="flex-1 w-full max-w-[1200px] mx-auto my-[50px] px-[20px]">
+        
+        <!-- HEADER -->
+        <div class="text-center mb-[30px]">
+            <h2 class="text-[28px] md:text-[32px] mb-[10px] font-bold">Riwayat Pertanyaan</h2>
+            <p class="text-[#666] font-normal text-[14px] md:text-base">Daftar seluruh pertanyaan yang telah dikirim melalui formulir kontak.</p>
         </div>
 
-        <div class="table-card">
-
-            <table class="riwayat-table">
-
-                <thead>
+        <!-- TABLE CARD -->
+        <div class="bg-white rounded-[12px] shadow-[0_10px_25px_rgba(0,0,0,.15)] w-full overflow-x-auto">
+            
+            <!-- Pengaturan Table Body khusus dibuat inline tailwind agar Javascript tetap berfungsi normal -->
+            <table class="w-full border-collapse text-left [&_th]:p-[15px] [&_td]:p-[15px] [&_td]:border-b [&_td]:border-[#eee] [&_td]:align-top hover:[&_tbody_tr]:bg-[#fafafa] [&_td:last-child]:max-w-[350px] [&_td:last-child]:break-words whitespace-nowrap md:whitespace-normal font-normal">
+                <thead class="bg-[#b8860b] text-white font-semibold">
                     <tr>
                         <th>No</th>
                         <th>Nama</th>
@@ -50,24 +61,27 @@
                         <th>Pesan</th>
                     </tr>
                 </thead>
-
+                
                 <tbody id="tableBody">
-
+                    <!-- Javascript Data akan muncul di sini -->
                 </tbody>
-
             </table>
-
         </div>
 
-        <div class="button-area">
-            <a href="kontak.html" class="btn-kembali">
+        <!-- BUTTON -->
+        <div class="text-center my-[35px]">
+            <a href="kontak.html" class="inline-block p-[12px_28px] border-2 border-[#b8860b] text-[#b8860b] bg-white no-underline rounded-[8px] transition-colors duration-300 hover:bg-[#b8860b] hover:text-white font-semibold">
                 ← Kembali ke Kontak
             </a>
         </div>
 
-    </section>
+    </main>
+
+    <!-- FOOTER (Global) -->
+    <footer class="text-center p-[20px] bg-black text-white w-full">
+        <p class="text-[14px] md:text-base font-normal">© 2026 Matahari Jaya Steel</p>
+    </footer>
 
     <script src="JS/script.js"></script>
-
 </body>
 </html>

@@ -86,19 +86,33 @@ function validasiForm() {
 }
 
 function tampilRiwayat() {
-
     const tbody = document.getElementById("tableBody");
-
     if (!tbody) return;
 
     const data = getData();
-
     tbody.innerHTML = "";
 
+    if (data.length === 0) {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+            <td colspan="6" class="text-center py-[40px] text-gray-500">
+                <div class="flex flex-col items-center justify-center">
+                    <!-- Ikon Inbox Kosong -->
+                    <svg class="w-16 h-16 mb-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"></path>
+                    </svg>
+                    <p class="text-lg font-semibold text-gray-700 mb-1">Belum ada riwayat pertanyaan</p>
+                    <p class="text-sm font-normal">Silakan isi formulir kontak terlebih dahulu.</p>
+                </div>
+            </td>
+        `;
+        tbody.appendChild(tr);
+        return; 
+    }
+
+
     for (let i = 0; i < data.length; i++) {
-
         const item = data[i];
-
         const tr = document.createElement("tr");
 
         tr.innerHTML =
@@ -107,7 +121,8 @@ function tampilRiwayat() {
             "<td>" + item.email + "</td>" +
             "<td>" + item.phone + "</td>" +
             "<td>" + item.subject + "</td>"+
-            "<td>"+item.message+"</td>";
+            "<td>" + item.message + "</td>";
+        
         tbody.appendChild(tr);
     }
 }
