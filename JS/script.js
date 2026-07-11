@@ -136,7 +136,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (hamburgerBtn && mobileMenu) {
         hamburgerBtn.addEventListener("click", function () {
-            // Memunculkan dan menyembunyikan menu saat diklik
             mobileMenu.classList.toggle("hidden");
             mobileMenu.classList.toggle("flex");
         });
