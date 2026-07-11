@@ -131,6 +131,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     tampilRiwayat();
 
+    const hamburgerBtn = document.getElementById("hamburgerBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    if (hamburgerBtn && mobileMenu) {
+        hamburgerBtn.addEventListener("click", function () {
+            // Memunculkan dan menyembunyikan menu saat diklik
+            mobileMenu.classList.toggle("hidden");
+            mobileMenu.classList.toggle("flex");
+        });
+    }
+
 });
 
 
